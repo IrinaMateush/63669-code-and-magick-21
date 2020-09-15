@@ -189,13 +189,12 @@
     return Math.floor(1.337 * wizardWidth);
   }
 
-  let getFireballSpeed = function (direction) {
-    let fireballSpeed = (direction === "right") ? 5 : 2;
-    return fireballSpeed;
+  let getFireballSpeed = function (isMovingLeft) {
+    return isMovingLeft ? 2 : 5;
   };
 
   let getWizardX = function (fieldWidth) {
-    return fieldWidth / 2 - wizardWidth / 2;
+    return (fieldWidth - wizardWidth) / 2;
   };
 
   let getWizardY = function (fieldHeight) {
